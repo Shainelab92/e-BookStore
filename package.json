@@ -1,0 +1,16 @@
+{
+  "name": "e-BookStore",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "build": "npm --workspace=backend run build && npm --workspace=frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
